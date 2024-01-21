@@ -1,38 +1,150 @@
-.App {
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('https://img.lovepik.com/background/20211020/large/lovepik-the-romantic-background-of-the-hand-painted-image_400058087.jpg') center/cover fixed;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-container {
+  text-align: center;
+  margin: 20px;
+  font-family: cursive;
+  color: #1d00f6;
+}
+
+.button-container {
+  margin-top: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  font-size: 20px;
+  margin: 15px;
+  padding: 15px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-primary,
+.btn-primary:hover {
+  background-color: #ff66b2;
+  border-color: #ff66b2;
+  color: #fff;
+  transform: scale(1.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-success,
+.btn-success:hover {
+  background-color: #4caf50;
+  border-color: #4caf50;
+  color: #fff;
+  transform: scale(1.1);
 }
 
-.App-link {
-  color: #61dafb;
+.btn-danger,
+.btn-danger:hover {
+  background-color: #f44336;
+  border-color: #f44336;
+  color: #fff;
+  transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
+/* Home.css */
+
+.home-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-family: 'Trattatello, fantasy';
+  font-size: 2rem;
+  color: #ff4bfc;
+  margin-bottom: 20px;
+}
+
+.start-button {
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #ff66b2;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.start-button:hover {
+  background-color: #ff8c66;
+  transform: scale(1.1);
+}
+
+/* Result.css */
+
+.result-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.result-message {
+  font-family: 'Aphrodite Slim', cursive;
+  background-color: #6aedf2;
+  font-size: 1.8rem;
+  color: #0784f2;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  width: 300px;
+  margin: 20px auto;
+}
+
+.love-chart {
+  border-radius: 10px;
+  background: linear-gradient(45deg, #ff66ff, #c417eb);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.custom-message {
+  font-family: 'Luminari', fantasy, 'Arial', sans-serif;
+  font-size: 30px;
+  color: #66f7ff;
+  margin-top: 20px;
+  background-color: #f22dd8;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .start-button {
+    font-size: 1.2rem;
   }
 }
